@@ -40,5 +40,6 @@ const App = () => {
 
 export default App;
 
-// youtube video: https://www.youtube.com/watch?v=ngc9gnGgUdA
-// left off at - 1:01:26
+
+// wrapped up step 1 video watch below next
+// youtube video: https://www.youtube.com/watch?v=aibtHnbeuio&t=1s&pbjreload=101
