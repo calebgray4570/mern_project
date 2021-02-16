@@ -9,13 +9,13 @@ import memories from './images/memories.png';
 import useStyles from './styles';
 
 const App = () => {
-    const [currentId, setCurrentId] = useState(null);
+    const [currentId, setCurrentId] = useState(0);
     const classes = useStyles();
     const dispatch = useDispatch();
 
     useEffect(() => {
         dispatch(getPosts());
-    }, [dispatch])
+    }, [currentId, dispatch])
 
     return (
         <Container maxWidth="lg">
@@ -25,7 +25,7 @@ const App = () => {
             </AppBar>
             <Grow in>
                 <Container>
-                    <Grid container justify="space-between" alignItems="stretch" spacing={3}>
+                    <Grid container className={classes.mainContainer} justify="space-between" alignItems="stretch" spacing={3}>
                         <Grid item xs={12} sm={7}>
                             <Posts setCurrentId={setCurrentId}/>
                         </Grid>
@@ -42,5 +42,5 @@ const App = () => {
 export default App;
 
 
-// wrapped up step 1 video watch below next
+// left off: 1:06:38
 // youtube video: https://www.youtube.com/watch?v=aibtHnbeuio&t=1s&pbjreload=101
